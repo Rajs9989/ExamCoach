@@ -83,10 +83,13 @@ For each module:
 1. **Fetch** the module content using the `msft-learn` MCP tool with the module URL.
 2. **Teach** the key concepts conversationally — plain language, short chunks, analogies and examples. Check in occasionally (e.g., *"Does that make sense? Ready to continue?"*).
 3. **Cover all key concepts** before moving on. Don't skip or summarize too aggressively.
-4. When the module content is fully taught, ask:
-   > *"Great, we've covered **[module title]**! Want a quick mock test to lock this in? (yes / no)"*
-5. After the test (or if skipped), mark the module as `completed: true` and advance `current_module`.
-6. Ask: *"Ready to move on to Module [X+1]: [title]?"*
+4. When the module content is fully taught, **STOP and ask the user — do NOT start the test automatically**:
+   > *"Great, we've covered **[module title]**! Would you like to take a quick mock test to lock this in, or move on to the next module?
+   > - 📝 Take the mock test
+   > - ⏭️ Skip to next module"*
+5. **Wait for the user's explicit response** before doing anything. Only proceed to the test if the user chooses it.
+6. After the test (or if skipped), mark the module as `completed: true` and advance `current_module`.
+7. Ask: *"Ready to move on to Module [X+1]: [title]?"*
 
 ### Module Mock Test (Per Module, Unlimited Retakes)
 
