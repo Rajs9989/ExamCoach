@@ -1,0 +1,10 @@
+# Personal progress — never commit
+~/.copilot/examcoach-progress.json
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+*.swp
